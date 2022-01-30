@@ -1,4 +1,5 @@
-@import "assets/css/global";
+@import "assets/css/variables";
+@import "assets/css/footer";
 
 html,
 body {
@@ -9,10 +10,18 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 0.8vw;
     font-weight: 300;
+
+    cursor: default;
 }
 
-footer {
-    background-color: $dark;
+a {
+    cursor: pointer;
+    font-weight: $bold-font;
+    transition: $transition;
+}
+
+a:hover {
+    font-weight: $normal-font;
 }
 
 #wrap {
@@ -28,50 +37,4 @@ footer {
 
 #copyright {
     font-size: small;
-}
-
-footer .logo {
-    width: 35%;
-    margin-bottom: 1rem;
-}
-
-footer .flag {
-    cursor: pointer;
-    border: 1px solid white;
-}
-
-footer .col-md-4 {
-    padding-right: 2rem;
-}
-
-footer .list p::before {
-    content: '›\a0\a0';
-}
-
-footer .icons-list i::after {
-    content: '\a0\a0';
-}
-
-footer h5 {
-    margin-bottom: 1rem;
-}
-
-footer .social-media-links i {
-    cursor: pointer;
-
-    padding: 0.5rem;
-
-    border-radius: 10px;
-    border-color: white; 
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: rgb(255, 255, 255, 0.25);
-
-    opacity: 0.6;
-    transition: 0.3s;
-}
-
-footer .social-media-links i:hover {
-    border-color: white;
-    opacity: 1;
 }

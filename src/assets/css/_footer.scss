@@ -1,0 +1,41 @@
+@import "variables";
+
+footer { background-color: $dark; }
+
+footer .col-md-4 { padding-right: 2rem; }
+
+footer .list p::before { content: '›\a0\a0'; }
+
+footer .icons-list i::after { content: '\a0\a0'; }
+
+footer h5 { margin-bottom: 1rem; }
+
+footer .logo {
+    width: 35%;
+    margin-bottom: 1rem;
+}
+
+footer .flag {
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+footer .social-media-links i {
+    cursor: pointer;
+
+    padding: 0.5rem;
+
+    border-radius: 10px;
+    border-color: white; 
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: rgb(255, 255, 255, 0.25);
+
+    opacity: $opacity;
+    transition: $transition;
+}
+
+footer .social-media-links i:hover {
+    border-color: white;
+    opacity: 1;
+}
