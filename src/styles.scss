@@ -55,3 +55,23 @@ footer .icons-list i::after {
 footer h5 {
     margin-bottom: 1rem;
 }
+
+footer .social-media-links i {
+    cursor: pointer;
+
+    padding: 0.5rem;
+
+    border-radius: 10px;
+    border-color: white; 
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: rgb(255, 255, 255, 0.25);
+
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+footer .social-media-links i:hover {
+    border-color: white;
+    opacity: 1;
+}
