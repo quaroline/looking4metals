@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/css/global";
+
+html,
+body {
+    height: 100%;
+    background-color: $light;
+    overflow-x: hidden!important;
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.8vw;
+    font-weight: 300;
+}
+
+footer {
+    background-color: $dark;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -283px;
+}
+
+#push {
+    height: 283px;
+}
+
+#copyright {
+    font-size: small;
+}
+
+footer .logo {
+    width: 35%;
+    margin-bottom: 1rem;
+}
+
+footer .flag {
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+footer .col-md-4 {
+    padding-right: 2rem;
+}
+
+footer .list p::before {
+    content: '›\a0\a0';
+}
+
+footer .icons-list i::after {
+    content: '\a0\a0';
+}
+
+footer h5 {
+    margin-bottom: 1rem;
+}
