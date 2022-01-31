@@ -1,7 +1,5 @@
 @import "variables";
 
-footer { background-color: $dark; }
-
 footer .col-md-4 { padding-right: 2rem; }
 
 footer .list p::before { content: '›\a0\a0'; }
@@ -9,6 +7,18 @@ footer .list p::before { content: '›\a0\a0'; }
 footer .icons-list i::after { content: '\a0\a0'; }
 
 footer h5 { margin-bottom: 1rem; }
+
+footer a:hover { color: $light; }
+
+footer { 
+    background-color: $dark; 
+    font-weight: 300;
+}
+
+footer a { 
+    color: $light; 
+    font-weight: $thin-font;
+}
 
 footer .logo {
     width: 35%;
