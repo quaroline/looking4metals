@@ -16,6 +16,16 @@ body {
     background-color: $light;
 }
 
+::-moz-selection { 
+    color: $light;
+    background: $primary;
+  }
+  
+::selection {
+    color: $light;
+    background: $primary;
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
