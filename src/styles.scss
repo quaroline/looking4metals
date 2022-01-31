@@ -12,8 +12,12 @@ body {
     font-size: 0.8vw;
     font-weight: $thin-font;
 
-    color: $darkest;
+    color: $font-color;
     background-color: $light;
+}
+
+h1, h2, h3, h4, h5 {
+    color: $dark;
 }
 
 ::-moz-selection { 
