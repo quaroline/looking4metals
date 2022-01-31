@@ -9,6 +9,10 @@ a {
     letter-spacing: 1px;
 }
 
+a:hover {
+    color: $light;
+}
+
 nav {
     z-index: 99999;
     height: 5rem;
@@ -22,8 +26,8 @@ li {
 .scrolled { 
     transition: background-color 200ms linear; 
     background-color: $light;
-    color: $darkest;
+    color: $dark;
     box-shadow: 0 0 3px rgb(60 72 88 / 15%);
 }
 
-.scrolled a { color: $darkest; }
+.scrolled a { color: $dark; }
