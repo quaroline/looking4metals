@@ -4,24 +4,29 @@
 html,
 body {
     height: 100%;
-    background-color: $light;
+
     overflow-x: hidden!important;
+    cursor: default;
 
     font-family: 'Nunito Sans', sans-serif;
     font-size: 0.8vw;
-    font-weight: 300;
+    font-weight: $thin-font;
 
-    cursor: default;
+    color: $darkest;
+    background-color: $light;
 }
 
 a {
     cursor: pointer;
+    text-decoration: none;
+    color: $secondary;
     font-weight: $bold-font;
     transition: $transition;
 }
 
 a:hover {
     font-weight: $normal-font;
+    color: $tertiary;
 }
 
 #wrap {

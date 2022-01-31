@@ -20,7 +20,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-                <img class="logo" src="http://landrick.angular.themesbrand.com/assets/images/logo-light.png" alt="Looking4Metals">
+                <img class="logo" src="" alt="Logo da empresa">
                 <p>Comece a trabalhar conosco e forneceremos tudo o que você precisa para gerar seus suprimentos e conscientização.</p>
                 <div class="social-media-links">
                     <i class="fab fa-linkedin-in"></i>
@@ -29,9 +29,9 @@
             <div class="col-md-4">
                 <h5>Links Úteis</h5>
                 <div class="list">
-                    <p>Página Inicial</p>
-                    <p>Sobre Nós</p>
-                    <p>Nossos Serviços</p>
+                    <p><a href="#home">Página Inicial</a></p>
+                    <p><a href="#about">Sobre Nós</a></p>
+                    <p><a href="#services">Nossos Serviços</a></p>
                 </div>        
             </div>
             <div class="col-md-4">
@@ -51,8 +51,8 @@
             <div class="d-flex justify-content-between">
                 <p id="copyright"></p>
                 <div>
-                    <img id="pt" class="flag" src="assets/pt.png" title="Português" alt="Freepik's Brazilian flag (International Flags pack)">
-                    <img id="en" class="flag" src="assets/en.png" title="English" alt="Freepik's United Kingdom flag (International Flags pack)">
+                    <img id="pt" class="flag" src="assets/img/pt.png" title="Português" alt="Freepik's Brazilian flag (International Flags pack)">
+                    <img id="en" class="flag" src="assets/img/en.png" title="English" alt="Freepik's United Kingdom flag (International Flags pack)">
                 </div>
             </div>
           </div>
@@ -60,21 +60,10 @@
     </footer>
 </body>
 
+<script src="assets/js/index.js"></script>
 <script src="https://kit.fontawesome.com/e55f95f755.js" crossorigin="anonymous"></script>
 <script 
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
   crossorigin="anonymous"></script>
-
 </html>
-<script>
-    setCopyrightCurrentYear = () => {
-        let span = document.getElementById('copyright');
-
-        span.innerText = `© ${new Date().getFullYear()} LOOKING 4 METALS`;
-    }
-
-    (() => {
-        setCopyrightCurrentYear();
-    })();
-</script>
