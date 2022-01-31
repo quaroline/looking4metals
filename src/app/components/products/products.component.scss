@@ -1,0 +1,50 @@
+@import "./../../../assets/css/variables";
+
+.product-card {
+    padding: 1rem;
+    margin: 1rem;
+
+    background-color: white;
+    border-radius: .5rem;
+
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+  
+.product-card::before {
+    content: ' ';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: .5rem;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.product-card:hover::before { opacity: 1; }
+
+.product-card:hover {
+    h5 { color: $primary; }
+    p { color: $secondary; }
+}
+
+.icon {
+    width: 4.2rem;
+    height: 4.2rem;
+
+    margin: .8rem;
+    padding: .8rem;
+    border-radius: .5rem;
+
+    font-size: 1.866rem;
+
+    background-color: $light;
+    color: $primary;
+}
+
+.text-center {
+    h5 { font-weight: 600; padding: .8rem; }
+
+    p { font-weight: 400; padding: 0; }
+}
