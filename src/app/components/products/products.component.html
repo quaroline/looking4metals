@@ -1,6 +1,7 @@
 <div *ngIf="products" class="container">
     <carousel
         [autoplay]="true"
+        [loop]="true"
         [autoplayInterval]="2000"
         [pauseOnHover]="true"
         [dots]="false"
@@ -8,9 +9,7 @@
         [arrowsOutside]="false"
         [cellsToShow]="4"
         [cellWidth]="'100%'"
-        [height]="300"
-        [freeScroll]="false"
-        [loop]="true">
+        [height]="300">
         <div class="carousel-cell" *ngFor="let product of products">
             <div class="product-card">
                 <div class="text-center">
