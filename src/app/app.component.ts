@@ -19,7 +19,7 @@ export class AppComponent {
     let element = document.querySelector('#navbar') as HTMLElement;
 
     if (element) {
-      if (document.body.scrollTop > element.clientHeight) {
+      if (document.body.scrollTop >= element.clientHeight) {
         this.scrolled = true;
 
         element.classList.add('scrolled');
