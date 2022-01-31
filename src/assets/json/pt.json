@@ -3,12 +3,27 @@
         {
             "title": "Título em português 1",
             "description": "Descrição em português 1",
-            "icon": ""
+            "icon": "fas fa-medal"
         },
         {
             "title": "Título em português 2",
             "description": "Descrição em português 2",
-            "icon": ""
+            "icon": "fas fa-recycle"
+        },
+        {
+            "title": "Título em português 3",
+            "description": "Descrição em português 3",
+            "icon": "fas fa-recycle"
+        },
+        {
+            "title": "Título em português 4",
+            "description": "Descrição em português 4",
+            "icon": "fas fa-recycle"
+        },
+        {
+            "title": "Título em português 5",
+            "description": "Descrição em português 5",
+            "icon": "fas fa-recycle"
         }
     ]
 }

@@ -16,6 +16,19 @@ setBehaviorToSmooth = () => {
     });
 }
 
+changeLanguage = (selectedLanguage) => {
+    const className = 'selected';
+    
+    let selectedFlag = document.getElementById(selectedLanguage);
+    let deselectedFlag = document.getElementById(selectedLanguage == 'pt' ? 'en' : 'pt');
+
+    if (!selectedFlag.classList.contains(className)) {
+        selectedFlag.classList.toggle(className);
+
+        deselectedFlag.classList.toggle(className);
+    }
+}
+
 (() => {
     setCopyrightCurrentYear();
 

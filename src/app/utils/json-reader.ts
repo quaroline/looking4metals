@@ -3,17 +3,20 @@ import pt from '../../assets/json/pt.json';
 
 import { Product } from '../models/product';
 
-export class JsonReader {
-    constructor(language: string) {
-        this.data = language == 'pt' ? pt : en;
+export abstract class JsonReader {
+    private static getData(): any {
+        let ukFlag = document.querySelector('#en') as HTMLElement;
+
+        if (ukFlag.classList.contains('selected'))
+            return en;
+
+        return pt;
     }
 
-    data: any = null;
-
-    public getProducts(): Product[] {
+    public static getProducts(): Product[] {
         let object: Product[] = [];
 
-        Object.assign(object, this.data.products);
+        Object.assign(object, this.getData().products);
 
         return object;
     }
