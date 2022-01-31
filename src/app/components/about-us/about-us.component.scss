@@ -20,3 +20,12 @@ button:hover {
 button::after {
     content: '\a0\a0›\a0';
 }
+
+a {
+    color: $light;
+    font-weight: $thin-font;
+}
+
+a:hover {
+    font-weight: $thin-font;
+}
