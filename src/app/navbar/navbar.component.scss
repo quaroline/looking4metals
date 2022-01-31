@@ -1,0 +1,29 @@
+@import "./../../assets/css/variables";
+
+a { 
+    color: $light;
+    text-transform: uppercase; 
+
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+nav {
+    z-index: 999;
+    height: 5rem;
+}
+
+li {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.scrolled { 
+    transition: background-color 200ms linear; 
+    background-color: $light;
+    color: $darkest;
+    box-shadow: 0 0 3px rgb(60 72 88 / 15%);
+}
+
+.scrolled a { color: $darkest; }
