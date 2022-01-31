@@ -1,0 +1,14 @@
+{
+    "products": [
+        {
+            "title": "Título em inglês 1",
+            "description": "Descrição em inglês 1",
+            "icon": ""
+        },
+        {
+            "title": "Título em inglês 2",
+            "description": "Descrição em inglês 2",
+            "icon": ""
+        }
+    ]
+}

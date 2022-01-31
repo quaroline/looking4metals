@@ -1,0 +1,14 @@
+{
+    "products": [
+        {
+            "title": "Título em português 1",
+            "description": "Descrição em português 1",
+            "icon": ""
+        },
+        {
+            "title": "Título em português 2",
+            "description": "Descrição em português 2",
+            "icon": ""
+        }
+    ]
+}
