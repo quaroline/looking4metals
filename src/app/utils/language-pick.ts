@@ -1,20 +1,16 @@
-import { Component, OnInit, Renderer2, RendererFactory2 } from '@angular/core';
+import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 
-@Component({
-  selector: 'app-language-pick',
-  template: '',
-  styleUrls: ['./language-pick.component.scss']
+@Injectable({
+  providedIn: 'root',
 })
-export class LanguagePickComponent implements OnInit {
+export abstract class LanguagePick {
 
   private renderer: Renderer2;
-  
+
   constructor(private rendererFactory: RendererFactory2) {
     this.renderer = this.rendererFactory.createRenderer(null, null);
-  }
 
-  ngOnInit(): void {
-    this.createAndInsertImagesElementOnHtml();
+    this.flagsDiv = document.querySelector('#flags') as HTMLElement;
   }
 
   flags: any[] = [
@@ -32,12 +28,16 @@ export class LanguagePickComponent implements OnInit {
       title: 'English',
       alt: 'Freepik\'s United Kingdom flag (International Flags pack)'
     }
-  ]
+  ];
+
+  flagsDiv: HTMLElement | undefined;
+
+  init(): void {
+    this.createAndInsertImagesElementOnHtml();
+  }
 
   createAndInsertImagesElementOnHtml(): void {
-    let flagsDiv = document.querySelector('#flags') as HTMLElement;
-
-    if (!flagsDiv) 
+    if (!this.flagsDiv)
       return;
 
     this.flags.forEach((flagInfo) => {
@@ -52,27 +52,27 @@ export class LanguagePickComponent implements OnInit {
           });
 
           continue;
-        } 
-        
+        }
+
         this.renderer.setProperty(flag, property, flagInfo[property]);
       }
 
       this.renderer.listen(flag, 'click', () => this.changeLanguage(flagInfo.id));
 
-      this.renderer.appendChild(flagsDiv, flag);
+      this.renderer.appendChild(this.flagsDiv, flag);
     });
   }
 
   changeLanguage = (selectedLanguage: string) => {
     const className = 'selected';
-    
+
     let selectedFlag = document.getElementById(selectedLanguage);
     let deselectedFlag = document.getElementById(selectedLanguage == 'pt' ? 'en' : 'pt');
 
     if (selectedFlag && deselectedFlag && !selectedFlag.classList.contains(className)) {
-        selectedFlag.classList.toggle(className);
+      selectedFlag.classList.toggle(className);
 
-        deselectedFlag.classList.toggle(className);
+      deselectedFlag.classList.toggle(className);
     }
   }
 }

@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
+import { LanguagePick } from './utils/language-pick';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,14 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
   title = 'Looking 4 Metals';
 
   scrolled: boolean = false;
+
+  constructor(private languagePick: LanguagePick) {
+    this.languagePick.init();
+  }
 
   @HostListener('document:mousewheel', ['$event'])
   onDocumentMousewheelEvent() {

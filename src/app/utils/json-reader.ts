@@ -7,7 +7,7 @@ export abstract class JsonReader {
     private static getData(): any {
         let ukFlag = document.querySelector('#en') as HTMLElement;
 
-        if (ukFlag.classList.contains('selected'))
+        if (ukFlag?.classList.contains('selected'))
             return en;
 
         return pt;
